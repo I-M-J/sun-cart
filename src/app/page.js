@@ -1,4 +1,5 @@
 import HeroBanner from "@/components/home/HeroBanner"
+import SummerCareTips from "@/components/home/SummerCareTips"
 import TopBrands from "@/components/home/TopBrands"
 
 const HomePage = () => {
@@ -6,6 +7,7 @@ const HomePage = () => {
         <>
             <HeroBanner />
 
+            <SummerCareTips />
 
             <TopBrands />
         </>
