@@ -1,4 +1,16 @@
+import { Plus_Jakarta_Sans, Fraunces } from "next/font/google";
+import Navbar from "@/components/layouts/Navbar";
 import "./globals.css";
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-display",
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -9,10 +21,16 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={` h-full antialiased`}
+      className={`${plusJakartaSans.variable} ${fraunces.variable} h-full antialiased`}
+      data-theme="light"
     >
-      <body className="min-h-full flex flex-col">
-        {children}
+      <body className="font-sans min-h-full flex flex-col">
+        <Navbar />
+
+        <main>
+          {children}
+        </main>
+
       </body>
     </html>
   );
