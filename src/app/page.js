@@ -1,6 +1,10 @@
+import HeroBanner from "@/components/home/HeroBanner"
+
 const HomePage = () => {
     return (
-        <div>HomePage</div>
+        <>
+            <HeroBanner />
+        </>
     )
 }
 

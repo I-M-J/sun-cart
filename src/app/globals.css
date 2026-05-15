@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui";
+@import "animate.css";
 
 @theme {
   --color-bg-muted: #f5efe6;
@@ -10,4 +11,15 @@
 
 [data-theme] {
   --color-primary: #FF6B6B;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #0D9488;
+  --color-secondary-foreground: #ffffff;
+  --color-warning: #FFC72C;
+  --color-warning-foreground: #1A1A2E;
+  --color-success: #10B981;
+  --color-success-foreground: #ffffff;
+  --color-danger: #EF4444;
+  --color-danger-foreground: #ffffff;
+  --color-background: #FFFBF5;
+  --color-foreground: #1A1A2E;
 }
