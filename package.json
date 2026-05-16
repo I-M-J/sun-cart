@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@better-auth/mongo-adapter": "^1.6.11",
     "animate.css": "^4.1.1",
     "better-auth": "^1.6.11",
     "daisyui": "^5.5.19",
