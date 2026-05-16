@@ -1,13 +1,16 @@
 "use client"
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 
 const LoginPage = () => {
+    const wasLoggedIn = useRef(true);
     const router = useRouter();
+    const searchParams = useSearchParams();
+    const callbackUrl = searchParams.get("callbackUrl") || "/";
 
     const {
         register,
@@ -15,15 +18,15 @@ const LoginPage = () => {
         formState: { errors, isSubmitting },
     } = useForm();
 
-    const { data: session } = authClient.useSession();
+    const { data: session, isPending } = authClient.useSession();
     const user = session?.user;
 
     useEffect(() => {
-        if (user) {
+        if (user && wasLoggedIn.current) {
             toast.success("You are already logged in");
-            router.replace("/");
+            router.replace(callbackUrl);
         }
-    }, [user, router]);
+    }, [user, router, callbackUrl]);
 
     const onSubmit = async (data) => {
         const { email, password } = data;
@@ -31,7 +34,7 @@ const LoginPage = () => {
         const { data: signInData, error: signInError } = await authClient.signIn.email({
             email: email,
             password: password,
-            callbackUrl: "/"
+            callbackUrl: callbackUrl,
         });
 
         if (signInError) {
@@ -39,10 +42,13 @@ const LoginPage = () => {
         }
 
         if (signInData) {
+            wasLoggedIn.current = false;
             toast.success("Login successful");
-            router.replace("/");
+            router.replace(callbackUrl);
         }
     }
+
+    if (isPending || user) return null;
 
     return (
         <section className="min-h-[calc(100vh-64px)] flex items-center justify-center bg-bg-muted py-12 px-4 sm:px-6 lg:px-8">

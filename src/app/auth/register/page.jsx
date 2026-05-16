@@ -4,20 +4,22 @@ import { useForm } from "react-hook-form";
 import { authClient } from "@/lib/auth-client";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
-
-
+import { useEffect, useRef } from "react";
 
 
 const RegisterPage = () => {
+    const wasLoggedIn = useRef(true);
     const router = useRouter();
 
-    const { data: session } = authClient.useSession();
+    const { data: session, isPending } = authClient.useSession();
     const user = session?.user;
 
-    if (user) {
-        toast.success("You are already logged in");
-        router.replace("/");
-    }
+    useEffect(() => {
+        if (user && wasLoggedIn) {
+            toast.success("You are already logged in");
+            router.replace("/");
+        }
+    }, [user, router]);
 
     const {
         register,
@@ -34,7 +36,7 @@ const RegisterPage = () => {
             image: photoURL,
             email: email,
             password: password,
-            callbackUrl: "/"
+            callbackUrl: "/",
         });
 
         if (signUpError) {
@@ -46,6 +48,8 @@ const RegisterPage = () => {
             router.replace("/");
         }
     }
+
+    if (isPending || user) return null;
 
     return (
         <section className="min-h-[calc(100vh-64px)] flex items-center justify-center bg-bg-muted py-12 px-4 sm:px-6 lg:px-8">
@@ -72,8 +76,8 @@ const RegisterPage = () => {
                             <label className="label text-sm font-medium text-stone-700 mb-1">Photo URL</label>
                             <input
                                 type="text"
-                                className="input text-base w-full px-4 py-2 border border-stone-300 rounded-lg mb-1" placeholder="Your Photo URL"
-                                {...register("photoURL", { required: "Photo URL is required" })} />
+                                className="input text-base w-full px-4 py-2 border border-stone-300 rounded-lg mb-1" placeholder="https://"
+                                {...register("photoURL")} />
                             {errors.photoURL && <p className="text-danger text-xs">{errors.photoURL.message}</p>}
                         </div>
 
