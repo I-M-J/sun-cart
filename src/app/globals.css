@@ -7,8 +7,13 @@
   --color-bg-surface: #ffffff;
   --font-sans: "Plus Jakarta Sans", sans-serif;
   --font-display: "Fraunces", serif;
+
   --color-background: #FFFBF5;
   --color-foreground: #1A1A2E;
+
+  --color-danger: #EF4444;
+  --color-success: #10B981;
+
 }
 
 [data-theme] {
@@ -18,8 +23,8 @@
   --color-secondary-foreground: #ffffff;
   --color-warning: #FFC72C;
   --color-warning-foreground: #1A1A2E;
-  --color-success: #10B981;
+
   --color-success-foreground: #ffffff;
-  --color-danger: #EF4444;
+
   --color-danger-foreground: #ffffff;
 }
