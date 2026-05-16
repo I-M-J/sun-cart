@@ -73,7 +73,7 @@ const HeroBanner = () => {
 
         <p className="text-lg text-stone-200 md:text-xl">{slide.subtitle}</p>
 
-        <Link href="/products" className="btn bg-blue-500 text-white border border-transparent rounded-full shadow-none px-6 py-6 text-base md:text-lg">{slide.button}</Link>
+        <Link href="/products" className="btn bg-blue-500/90 text-white border border-transparent rounded-full shadow-none px-6 py-6 text-base md:text-lg">{slide.button}</Link>
       </div>
 
       <div className="absolute bottom-6 left-0 right-0 z-10 flex justify-center gap-2">

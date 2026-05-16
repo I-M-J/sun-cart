@@ -1,0 +1,357 @@
+[
+    {
+        "id": 1,
+        "name": "Ray-Ban Aviator Classic",
+        "brand": "Ray-Ban",
+        "price": 160,
+        "originalPrice": 200,
+        "rating": 4.8,
+        "reviewCount": 1240,
+        "stock": 50,
+        "category": "Accessories",
+        "tags": [
+            "sunglasses",
+            "classic",
+            "summer"
+        ],
+        "description": "Currently one of the most iconic sunglass models in the world, Ray-Ban Aviator Classic sunglasses were originally designed for U.S. aviators in 1937.",
+        "features": [
+            "100% UV Protection",
+            "Metal Frame",
+            "Crystal Green Lenses",
+            "Case and cloth included"
+        ],
+        "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=800&q=80"
+        ],
+        "discount": 20,
+        "isFeatured": true
+    },
+    {
+        "id": 2,
+        "name": "SPF 50 Face Sunscreen",
+        "brand": "Supergoop!",
+        "price": 38,
+        "originalPrice": 38,
+        "rating": 4.9,
+        "reviewCount": 850,
+        "stock": 120,
+        "category": "Skincare",
+        "tags": [
+            "sunscreen",
+            "face",
+            "spf",
+            "skincare"
+        ],
+        "description": "A completely invisible, weightless, scentless sunscreen that leaves a velvety finish. Ideal for all skin types.",
+        "features": [
+            "Broad Spectrum SPF 50",
+            "Water-resistant (40 min)",
+            "Reef-friendly",
+            "Cruelty-free"
+        ],
+        "image": "https://images.unsplash.com/photo-1629198688000-71f23e745b6e?auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1629198688000-71f23e745b6e?auto=format&fit=crop&w=800&q=80"
+        ],
+        "discount": 0,
+        "isFeatured": true
+    },
+    {
+        "id": 3,
+        "name": "Tropical Print Board Shorts",
+        "brand": "Quiksilver",
+        "price": 45,
+        "originalPrice": 60,
+        "rating": 4.5,
+        "reviewCount": 320,
+        "stock": 40,
+        "category": "Clothing",
+        "tags": [
+            "shorts",
+            "swimwear",
+            "tropical"
+        ],
+        "description": "High-performance board shorts designed for ultimate comfort and flexibility. Perfect for surfing or chilling by the pool.",
+        "features": [
+            "4-way stretch fabric",
+            "Quick-dry technology",
+            "Drawstring closure",
+            "Back zip pocket"
+        ],
+        "image": "https://i.ebayimg.com/images/g/yv8AAOSwtaBb3wwe/s-l1600.webp",
+        "images": [
+            "https://i.ebayimg.com/images/g/yv8AAOSwtaBb3wwe/s-l1600.webp"
+        ],
+        "discount": 25,
+        "isFeatured": true
+    },
+    {
+        "id": 4,
+        "name": "Woven Straw Beach Bag",
+        "brand": "Roxy",
+        "price": 55,
+        "originalPrice": 55,
+        "rating": 4.7,
+        "reviewCount": 180,
+        "stock": 30,
+        "category": "Beach Essentials",
+        "tags": [
+            "bag",
+            "beach",
+            "straw",
+            "woven"
+        ],
+        "description": "Spacious enough to carry all your beach essentials, this woven straw bag features a classic design with sturdy leather straps.",
+        "features": [
+            "100% natural straw",
+            "Leather straps",
+            "Cotton lining",
+            "Inner zip pocket"
+        ],
+        "image": "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=800&q=80"
+        ],
+        "discount": 0,
+        "isFeatured": false
+    },
+    {
+        "id": 5,
+        "name": "Classic White Linen Shirt",
+        "brand": "Tommy Bahama",
+        "price": 85,
+        "originalPrice": 100,
+        "rating": 4.6,
+        "reviewCount": 420,
+        "stock": 60,
+        "category": "Clothing",
+        "tags": [
+            "shirt",
+            "linen",
+            "casual",
+            "white"
+        ],
+        "description": "A breathable and relaxed linen shirt that keeps you cool during the hottest summer days. A versatile wardrobe staple.",
+        "features": [
+            "100% Linen",
+            "Button-front closure",
+            "Machine washable",
+            "Breathable fabric"
+        ],
+        "image": "https://plus.unsplash.com/premium_photo-1725075088969-73798c9b422c?q=80&w=1171",
+        "images": [
+            "https://plus.unsplash.com/premium_photo-1725075088969-73798c9b422c?q=80&w=1171"
+        ],
+        "discount": 15,
+        "isFeatured": false
+    },
+    {
+        "id": 6,
+        "name": "Hydrating Aloe Vera Gel",
+        "brand": "SunBum",
+        "price": 12,
+        "originalPrice": 15,
+        "rating": 4.9,
+        "reviewCount": 1100,
+        "stock": 200,
+        "category": "Skincare",
+        "tags": [
+            "aloe",
+            "aftersun",
+            "skincare",
+            "hydration"
+        ],
+        "description": "Cooling and soothing aloe vera gel to instantly relieve sun-exposed skin. Formulated to restore moisture and prevent peeling.",
+        "features": [
+            "Contains Vitamin E",
+            "Non-sticky formula",
+            "Hypoallergenic",
+            "Cruelty-free"
+        ],
+        "image": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=800&q=80"
+        ],
+        "discount": 20,
+        "isFeatured": false
+    },
+    {
+        "id": 7,
+        "name": "Polarized Sports Sunglasses",
+        "brand": "Oakley",
+        "price": 140,
+        "originalPrice": 140,
+        "rating": 4.8,
+        "reviewCount": 650,
+        "stock": 45,
+        "category": "Accessories",
+        "tags": [
+            "sunglasses",
+            "sports",
+            "polarized"
+        ],
+        "description": "Engineered for maximum performance, these polarized sunglasses reduce glare and provide superior clarity during outdoor activities.",
+        "features": [
+            "O Matter™ frame",
+            "Prizm™ polarized lenses",
+            "100% UV filtering",
+            "Impact resistant"
+        ],
+        "image": "https://images.unsplash.com/photo-1577803645773-f96470509666?auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1577803645773-f96470509666?auto=format&fit=crop&w=800&q=80"
+        ],
+        "discount": 0,
+        "isFeatured": false
+    },
+    {
+        "id": 8,
+        "name": "Insulated Water Bottle 32oz",
+        "brand": "Hydro Flask",
+        "price": 45,
+        "originalPrice": 50,
+        "rating": 4.9,
+        "reviewCount": 2400,
+        "stock": 150,
+        "category": "Drinkware",
+        "tags": [
+            "water bottle",
+            "insulated",
+            "hydration"
+        ],
+        "description": "Keep your drinks ice-cold for up to 24 hours with this durable, double-wall vacuum insulated water bottle.",
+        "features": [
+            "TempShield™ insulation",
+            "18/8 Pro-Grade Stainless Steel",
+            "BPA-Free",
+            "Dishwasher safe"
+        ],
+        "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=800&q=80"
+        ],
+        "discount": 10,
+        "isFeatured": false
+    },
+    {
+        "id": 9,
+        "name": "Unisex Canvas Espadrilles",
+        "brand": "TOMS",
+        "price": 50,
+        "originalPrice": 60,
+        "rating": 4.4,
+        "reviewCount": 540,
+        "stock": 80,
+        "category": "Footwear",
+        "tags": [
+            "shoes",
+            "espadrilles",
+            "canvas",
+            "summer"
+        ],
+        "description": "Lightweight and comfortable, these classic canvas espadrilles are the perfect go-to footwear for your summer adventures.",
+        "features": [
+            "Canvas upper",
+            "Removable insole",
+            "Elastic gore for fit",
+            "Vegan friendly"
+        ],
+        "image": "https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1560769629-975ec94e6a86?auto=format&fit=crop&w=800&q=80"
+        ],
+        "discount": 16,
+        "isFeatured": false
+    },
+    {
+        "id": 10,
+        "name": "Microfiber Beach Towel",
+        "brand": "Sand Cloud",
+        "price": 48,
+        "originalPrice": 48,
+        "rating": 4.7,
+        "reviewCount": 890,
+        "stock": 100,
+        "category": "Beach Essentials",
+        "tags": [
+            "towel",
+            "beach",
+            "microfiber",
+            "sandproof"
+        ],
+        "description": "An ultra-absorbent, quick-drying microfiber towel that repels sand. Perfect for the beach, pool, or travel.",
+        "features": [
+            "Sand resistant",
+            "Super absorbent",
+            "Compact & lightweight",
+            "Sustainable materials"
+        ],
+        "image": "https://images.unsplash.com/photo-1625931046289-e51edea3e176?q=80&w=751",
+        "images": [
+            "https://images.unsplash.com/photo-1625931046289-e51edea3e176?q=80&w=751"
+        ],
+        "discount": 0,
+        "isFeatured": false
+    },
+    {
+        "id": 11,
+        "name": "Wide Brim Straw Sun Hat",
+        "brand": "Billabong",
+        "price": 30,
+        "originalPrice": 40,
+        "rating": 4.6,
+        "reviewCount": 310,
+        "stock": 55,
+        "category": "Accessories",
+        "tags": [
+            "hat",
+            "straw",
+            "sun protection"
+        ],
+        "description": "Stay shaded in style with this wide brim straw hat. Features an adjustable chin strap for windy beach days.",
+        "features": [
+            "100% Straw",
+            "Wide brim for sun protection",
+            "Adjustable chin strap",
+            "Woven patch detail"
+        ],
+        "image": "https://images.unsplash.com/photo-1514327605112-b887c0e61c0a?auto=format&fit=crop&w=800&q=80",
+        "images": [
+            "https://images.unsplash.com/photo-1514327605112-b887c0e61c0a?auto=format&fit=crop&w=800&q=80"
+        ],
+        "discount": 25,
+        "isFeatured": false
+    },
+    {
+        "id": 12,
+        "name": "Floral Maxi Sundress",
+        "brand": "Free People",
+        "price": 128,
+        "originalPrice": 128,
+        "rating": 4.8,
+        "reviewCount": 420,
+        "stock": 25,
+        "category": "Clothing",
+        "tags": [
+            "dress",
+            "floral",
+            "maxi",
+            "summer"
+        ],
+        "description": "Flowy, lightweight, and effortlessly chic. This floral maxi dress is perfect for summer evenings and garden parties.",
+        "features": [
+            "100% Rayon",
+            "Adjustable straps",
+            "Smocked bodice",
+            "Tiered skirt"
+        ],
+        "image": "https://images.unsplash.com/photo-1682802739047-24fa5d983e71?q=80&w=687",
+        "images": [
+            "https://images.unsplash.com/photo-1682802739047-24fa5d983e71?q=80&w=687"
+        ],
+        "discount": 0,
+        "isFeatured": false
+    }
+]
