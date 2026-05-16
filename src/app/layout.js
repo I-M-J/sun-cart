@@ -2,6 +2,10 @@ import { Plus_Jakarta_Sans, Fraunces } from "next/font/google";
 import Navbar from "@/components/layouts/Navbar";
 import "./globals.css";
 import Footer from "@/components/layouts/Footer";
+import dns from "node:dns";
+import { Toaster } from "react-hot-toast";
+
+dns.setServers(['8.8.8.8', '8.8.4.4']);
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -33,6 +37,8 @@ export default function RootLayout({ children }) {
         </main>
 
         <Footer />
+
+        <Toaster position="bottom-center" reverseOrder={false} />
       </body>
     </html>
   );

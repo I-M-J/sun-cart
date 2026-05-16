@@ -1,5 +1,9 @@
+import dns from "node:dns";
 import { mongodbAdapter } from "@better-auth/mongo-adapter";
-import { betterAuth } from "better-auth/*";
+import { betterAuth } from "better-auth";
+import { MongoClient } from "mongodb";
+
+dns.setServers(['8.8.8.8', '8.8.4.4']);
 
 const client = new MongoClient(process.env.MONGO_URI);
 const db = client.db("sun-cart");

@@ -1,18 +1,43 @@
 "use client"
 import Link from "next/link";
 import { useForm } from "react-hook-form";
+import { authClient } from "@/lib/auth-client";
+import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
-const onSubmit = (data) => {
-    const { name, photoURL, email, password } = data;
 
-}
+
 
 const RegisterPage = () => {
+    const router = useRouter();
+
     const {
         register,
         handleSubmit,
         formState: { errors, isSubmitting }
     } = useForm();
+
+    const onSubmit = async (data) => {
+
+        const { name, photoURL, email, password } = data;
+
+        const { data: signUpData, error: signUpError } = await authClient.signUp.email({
+            name: name,
+            photo: photoURL,
+            email: email,
+            password: password,
+            callbackUrl: "/"
+        });
+
+        if (signUpError) {
+            toast.error(signUpError.message);
+        }
+
+        if (signUpData) {
+            toast.success("Registration successful");
+            router.replace("/");
+        }
+    }
 
     return (
         <section className="min-h-[calc(100vh-64px)] flex items-center justify-center bg-bg-muted py-12 px-4 sm:px-6 lg:px-8">

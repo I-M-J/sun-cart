@@ -1,19 +1,37 @@
 "use client"
+import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
-
-const onSubmit = (data) => {
-    const { email, password } = data;
-
-    console.log(email, password);
-}
+import toast from "react-hot-toast";
 
 const LoginPage = () => {
+    const router = useRouter();
+
     const {
         register,
         handleSubmit,
         formState: { errors, isSubmitting },
     } = useForm();
+
+    const onSubmit = async (data) => {
+        const { email, password } = data;
+
+        const { data: signInData, error: signInError } = await authClient.signIn.email({
+            email: email,
+            password: password,
+            callbackUrl: "/"
+        });
+
+        if (signInError) {
+            toast.error(signInError.message);
+        }
+
+        if (signInData) {
+            toast.success("Login successful");
+            router.replace("/");
+        }
+    }
 
     return (
         <section className="min-h-[calc(100vh-64px)] flex items-center justify-center bg-bg-muted py-12 px-4 sm:px-6 lg:px-8">
