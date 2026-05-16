@@ -24,6 +24,8 @@ const LoginPage = () => {
                         </div>
 
                         <button className="btn h-fit w-full bg-blue-500/90 text-white px-4 py-3 text-base font-semibold rounded-full">Sign In</button>
+
+                        <button className="btn h-fit w-full bg-primary/80 text-white px-4 py-3 text-base font-semibold rounded-full">Login with Google</button>
                     </fieldset>
                 </form>
 
