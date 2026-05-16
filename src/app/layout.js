@@ -1,6 +1,7 @@
 import { Plus_Jakarta_Sans, Fraunces } from "next/font/google";
 import Navbar from "@/components/layouts/Navbar";
 import "./globals.css";
+import Footer from "@/components/layouts/Footer";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
           {children}
         </main>
 
+        <Footer />
       </body>
     </html>
   );

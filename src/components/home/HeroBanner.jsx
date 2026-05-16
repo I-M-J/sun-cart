@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 const slides = [
   {
     id: 1,
-    title: "Summer Collection 2024",
+    title: "Summer Sale 50% Off",
     subtitle: "Discover the latest trends for your perfect summer getaway.",
     image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80",
     button: "Shop Now",
