@@ -2,6 +2,7 @@
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 
@@ -13,6 +14,16 @@ const LoginPage = () => {
         handleSubmit,
         formState: { errors, isSubmitting },
     } = useForm();
+
+    const { data: session } = authClient.useSession();
+    const user = session?.user;
+
+    useEffect(() => {
+        if (user) {
+            toast.success("You are already logged in");
+            router.replace("/");
+        }
+    }, [user, router]);
 
     const onSubmit = async (data) => {
         const { email, password } = data;

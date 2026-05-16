@@ -1,5 +1,6 @@
 import { ShoppingCart, Sun, User } from "lucide-react"
 import Link from "next/link"
+import NavbarAuth from "./NavbarAuth"
 
 const Navbar = () => {
     return (
@@ -12,16 +13,10 @@ const Navbar = () => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="dropdown-content bg-bg-surface rounded-box z-50 mt-5 w-52 p-2 shadow space-y-4">
+                            className="dropdown-content bg-bg-surface rounded-box z-50 mt-5 w-52 p-2 shadow space-y-2">
                             <li className="text-xl font-semibold text-stone-600 btn btn-ghost p-2 h-fit w-full"><Link href="/">Home</Link></li>
 
                             <li className="text-xl font-semibold text-stone-600 btn btn-ghost p-2 h-fit w-full"><Link href="/products">Products</Link></li>
-
-                            <li className="text-xl font-semibold text-stone-600 btn btn-ghost p-2 h-fit w-full">
-                                <Link href="/auth/login">
-                                    Sign In
-                                </Link>
-                            </li>
                         </ul>
                     </div>
 
@@ -36,17 +31,7 @@ const Navbar = () => {
                 </div>
 
                 <div className="flex items-center gap-2">
-                    <Link href="" className="btn btn-ghost p-1 h-fit">
-                        <User className="h-5 w-5 text-stone-600" />
-                    </Link>
-
-                    <Link href="" className="btn btn-ghost p-1 h-fit">
-                        <ShoppingCart className="h-5 w-5 text-stone-600" />
-                    </Link>
-
-                    <Link href="/auth/login" className="btn btn-ghost p-1 h-fit text-lg font-semibold hidden md:flex">
-                        Sign In
-                    </Link>
+                    <NavbarAuth />
                 </div>
             </div>
         </nav>

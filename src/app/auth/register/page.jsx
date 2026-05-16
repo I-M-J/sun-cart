@@ -11,6 +11,14 @@ import { useRouter } from "next/navigation";
 const RegisterPage = () => {
     const router = useRouter();
 
+    const { data: session } = authClient.useSession();
+    const user = session?.user;
+
+    if (user) {
+        toast.success("You are already logged in");
+        router.replace("/");
+    }
+
     const {
         register,
         handleSubmit,
@@ -23,7 +31,7 @@ const RegisterPage = () => {
 
         const { data: signUpData, error: signUpError } = await authClient.signUp.email({
             name: name,
-            photo: photoURL,
+            image: photoURL,
             email: email,
             password: password,
             callbackUrl: "/"
