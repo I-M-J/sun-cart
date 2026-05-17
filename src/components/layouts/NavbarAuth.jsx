@@ -20,7 +20,7 @@ const NavbarAuth = () => {
         return (
             <Link href="/profile" className="flex items-center gap-2">
                 {
-                    (user.image && user.image.startsWith("https://")) ? (
+                    (user?.image && user?.image.startsWith("https://")) ? (
                         <Image
                             src={user.image}
                             alt={user.name}
