@@ -48,7 +48,17 @@ const LoginPage = () => {
         }
     }
 
-    if (isPending || user) return null;
+    if (isPending || user) return (
+        <section className="bg-bg-muted min-h-dvh flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+            <span className="animate__animated animate__fadeIn animate__delay-1s loading loading-ring loading-md text-primary" />
+        </section>
+    );
+
+    const handleGoogleSignIn = async () => {
+        const data = await authClient.signIn.social({
+            provider: "google",
+        });
+    };
 
     return (
         <section className="min-h-[calc(100vh-64px)] flex items-center justify-center bg-bg-muted py-12 px-4 sm:px-6 lg:px-8">
@@ -79,11 +89,16 @@ const LoginPage = () => {
                             {errors.password && <p className="text-danger text-xs">{errors.password.message}</p>}
                         </div>
 
-                        <button className="btn h-fit w-full bg-blue-500/90 text-white px-4 py-3 text-base font-semibold rounded-full">{isSubmitting ? <span className="loading loading-spinner loading-md text-white"></span> : "Sign In"}</button>
-
-                        <button className="btn h-fit w-full bg-primary/80 text-white px-4 py-3 text-base font-semibold rounded-full">Login with Google</button>
+                        <button
+                            type="submit"
+                            className="btn h-fit w-full bg-blue-500/90 text-white px-4 py-3 text-base font-semibold rounded-full"
+                        >
+                            {isSubmitting ? <span className="loading loading-spinner loading-md text-white"></span> : "Sign In"}
+                        </button>
                     </fieldset>
                 </form>
+
+                <button onClick={handleGoogleSignIn} className="btn h-fit w-full bg-primary/80 text-white px-4 py-3 text-base font-semibold rounded-full">Login with Google</button>
 
                 <p className="text-center text-sm text-stone-600">
                     Don't have an account?{" "}

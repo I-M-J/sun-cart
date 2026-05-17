@@ -3,6 +3,7 @@ import { headers } from "next/headers";
 import Image from "next/image";
 import Link from "next/link";
 import { Package, Settings } from "lucide-react";
+import { redirect } from "next/navigation";
 
 const ProfilePage = async () => {
 
@@ -11,6 +12,10 @@ const ProfilePage = async () => {
     });
 
     const user = session?.user;
+
+    if (!user) {
+        redirect("/auth/login");
+    }
 
     return (
         <div className="min-h-screen bg-bg-muted py-12">
@@ -21,26 +26,26 @@ const ProfilePage = async () => {
                     <div className="p-8 sm:p-10 flex flex-col sm:flex-row items-center sm:items-start gap-8">
                         <div>
                             {
-                                (user.image && user.image.startsWith("https://")) ? (
+                                (user?.image && user?.image.startsWith("https://")) ? (
                                     <Image
-                                        src={user.image}
-                                        alt={user.name}
+                                        src={user?.image}
+                                        alt={user?.name}
                                         width={100}
                                         height={100}
                                         className="rounded-full object-cover shrink-0"
                                     />
                                 ) : (
                                     <div className="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center shrink-0 text-3xl font-bold text-primary">
-                                        {user.name?.charAt(0).toUpperCase()}
+                                        {user?.name?.charAt(0).toUpperCase()}
                                     </div>
                                 )
                             }
                         </div>
 
                         <div className="grow text-center sm:text-left">
-                            <h2 className="text-2xl font-bold text-foreground mb-1">{user.name}</h2>
+                            <h2 className="text-2xl font-bold text-foreground mb-1">{user?.name}</h2>
 
-                            <p className="text-stone-500 mb-6">{user.email}</p>
+                            <p className="text-stone-500 mb-6">{user?.email}</p>
 
                             <Link href="/profile/edit" className="btn btn-primary text-white rounded-full h-fit px-4 py-2">Update Information</Link>
                         </div>

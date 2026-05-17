@@ -4,11 +4,10 @@ import { LogIn, LogOut, User } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
+
 const NavbarAuth = () => {
     const { data: session, isPending } = authClient.useSession();
     const user = session?.user;
-
-    console.log(user);
 
     if (isPending) {
         return (
