@@ -47,7 +47,7 @@ const NavbarAuth = () => {
     return (
         <div className="flex items-center gap-2">
 
-            <Link href="" className="btn btn-ghost p-1 h-fit">
+            <Link href="/profile" className="btn btn-ghost p-1 h-fit">
                 <User className="h-5 w-5 text-stone-600" />
             </Link>
 
