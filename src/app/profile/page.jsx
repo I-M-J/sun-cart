@@ -11,6 +11,10 @@ const ProfilePage = async () => {
         headers: await headers(),
     });
 
+    if (!session) {
+        redirect("/auth/login");
+    }
+
     const user = session?.user;
 
     return (

@@ -17,28 +17,30 @@ const NavbarAuth = () => {
 
     if (user) {
         return (
-            <Link href="/profile" className="flex items-center gap-2">
-                {
-                    (user?.image && user?.image.startsWith("https://")) ? (
-                        <Image
-                            src={user.image}
-                            alt={user.name}
-                            width={36}
-                            height={36}
-                            className="rounded-full object-cover"
-                        />
-                    ) : (
-                        <User className="h-5 w-5 text-stone-600" />
-                    )
-                }
-                <span className="text-foreground font-medium text-sm hidden md:block">
-                    {user.name}
-                </span>
+            <div className="flex items-center gap-4">
+                <Link href="/profile" className="flex items-center gap-2">
+                    {
+                        (user?.image && user?.image.startsWith("https://")) ? (
+                            <Image
+                                src={user.image}
+                                alt={user.name}
+                                width={36}
+                                height={36}
+                                className="rounded-full object-cover"
+                            />
+                        ) : (
+                            <User className="h-5 w-5 text-stone-600" />
+                        )
+                    }
+                    <span className="text-foreground font-medium text-sm hidden md:block">
+                        {user.name}
+                    </span>
+                </Link>
 
                 <button onClick={async () => await authClient.signOut()} className="btn btn-ghost p-1 h-fit text-lg text-danger font-semibold hidden sm:flex">Sign Out</button>
 
                 <button onClick={async () => await authClient.signOut()} className="btn btn-ghost p-1 h-fit text-lg text-danger font-semibold sm:hidden"><LogOut /></button>
-            </Link>
+            </div>
         );
     }
 
